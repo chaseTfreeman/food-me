@@ -56,3 +56,4 @@ gem 'masonry-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'carrierwave'
 gem 'devise'
+gem "rails_12factor", group: :production
