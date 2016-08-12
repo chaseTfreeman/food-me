@@ -1,0 +1,29 @@
+
+<section class="module parallax parallax-1">
+  <div class="container">
+    <h1>Food.Me</h1>
+  </div>
+</section>
+          <div id="boxes" class="transitions-enabled">
+            <div class="box-wrapper">
+            <div class="col-md-4">
+
+              <% @boxes.each do |box| %>
+              <div class="masonry_box">
+                <h3><%= box.theme %></h3>
+                <h4><%= box.title %></h4>
+
+
+                <%= link_to image_tag("#{box.image}"), box_path(box) %>
+                <div class="btn btn-primary"><%= link_to "View Box", box_path(box) %></div>
+                <div class="btn btn-primary"><%= link_to " Delete Box", box_path(box),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></div>
+              </div>
+              <% end %>
+
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>

@@ -1,0 +1,11 @@
+I"Ã(function() {
+  $(function() {
+    return $('#recipes').imagesLoaded(function() {
+      return $('#houses').masonry({
+        itemSelector: '.masonry_box'
+      });
+    });
+  });
+
+}).call(this);
+:ET

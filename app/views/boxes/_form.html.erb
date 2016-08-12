@@ -1,0 +1,27 @@
+<section class="module parallax parallax-2">
+  <div class="container">
+<h1>New Box</h1>
+</div>
+</section>
+
+<div class="form">
+<%= form_for @box, :html => {:multipart => true} do |f| %>
+
+<p>
+  <%= f.label :theme %>
+  <%= f.text_field :theme %>
+</p>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+</div>
