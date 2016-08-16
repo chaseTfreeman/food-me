@@ -50168,3 +50168,69 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-08-16 14:13:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BoxesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering boxes/index.html.erb within layouts/application
+  [1m[36mBox Load (0.9ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  Rendered boxes/index.html.erb within layouts/application (93.2ms)
+Started GET "/" for ::1 at 2016-08-16 14:13:52 -0400
+Processing by BoxesController#index as HTML
+  [1m[36mUser Load (41.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering boxes/index.html.erb within layouts/application
+  [1m[36mBox Load (0.7ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  Rendered boxes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 4272ms (Views: 4176.4ms | ActiveRecord: 11.8ms)
+
+
+Completed 200 OK in 3884ms (Views: 3837.2ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/recipes/new" for ::1 at 2016-08-16 14:14:02 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/new.html.erb within layouts/application
+  [1m[36mBox Load (0.4ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  Rendered recipes/_form.html.erb (540.2ms)
+  Rendered recipes/new.html.erb within layouts/application (543.1ms)
+Completed 200 OK in 626ms (Views: 602.5ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/recipes" for ::1 at 2016-08-16 14:14:24 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PbZO6Vd2uYB15YPKS1crq3coVc5KChhTyGbe8GevI8SK/dPJCssSSkUZko5AR4MpJZHy9wLj4pAfixRTycDJkg==", "recipe"=>{"title"=>"More tacos Test", "ingredients"=>"Test", "directions"=>"test", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8a0a3ece70 @tempfile=#<Tempfile:/var/folders/qt/lq0kmr_s27j31677jspf1cvw0000gn/T/RackMultipart20160816-2554-17lb3z5.JPG>, @original_filename="ny.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"ny.JPG\"\r\nContent-Type: image/jpeg\r\n">, "box_ids"=>"43"}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: box_ids
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "ingredients", "directions", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "More tacos Test"], ["ingredients", "Test"], ["directions", "test"], ["image", "ny.JPG"], ["created_at", 2016-08-16 18:14:24 UTC], ["updated_at", 2016-08-16 18:14:24 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBox Load (0.4ms)[0m  [1m[34mSELECT  "boxes".* FROM "boxes" WHERE "boxes"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "collections" ("box_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["box_id", 43], ["recipe_id", 57], ["created_at", 2016-08-16 18:14:24 UTC], ["updated_at", 2016-08-16 18:14:24 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/recipes/57
+Completed 302 Found in 122ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/recipes/57" for ::1 at 2016-08-16 14:14:24 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 255ms (Views: 209.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/boxes.%23%3CBox::ActiveRecord_Associations_CollectionProxy:0x007f8a0a3ad068%3E" for ::1 at 2016-08-16 14:14:28 -0400
+Processing by BoxesController#index as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering boxes/index.html.erb within layouts/application
+  [1m[36mBox Load (0.6ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  Rendered boxes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 118ms (Views: 69.1ms | ActiveRecord: 1.1ms)
+
+
