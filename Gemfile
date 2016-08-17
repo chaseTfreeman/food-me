@@ -55,5 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'masonry-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'devise'
-gem "rails_12factor", group: :production

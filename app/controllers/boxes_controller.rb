@@ -44,4 +44,6 @@ before_action :authenticate_user!
     def box_params
       params.require(:box).permit( :theme, :title, :image, [:id, :description, :done, :_destroy])
     end
+
+
   end

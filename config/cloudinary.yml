@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: chasetfreeman
+  api_key: '843285876281226'
+  api_secret: er7JAFD_ohu7qtXp6omfRDKpUuI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: chasetfreeman
+  api_key: '843285876281226'
+  api_secret: er7JAFD_ohu7qtXp6omfRDKpUuI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: chasetfreeman
+  api_key: '843285876281226'
+  api_secret: er7JAFD_ohu7qtXp6omfRDKpUuI
+  enhance_image_tag: true
+  static_image_support: false
