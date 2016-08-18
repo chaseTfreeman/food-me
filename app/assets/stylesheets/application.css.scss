@@ -165,13 +165,13 @@ a {
   background-image: image-url("vegetable-oils");
  }
  section.module.parallax-2 {
-   background-image: url("butcher");
+   background-image: image-url("butcher");
  }
  section.module.parallax-3 {
-   background-image: url("spices");
+   background-image: image-url("spices");
  }
  section.module.parallax-4 {
-   background-image: url("cookbook");
+   background-image: image-url("cookbook");
  }
 
  @media all and (min-width: 600px) {
