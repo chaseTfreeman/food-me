@@ -42,6 +42,7 @@ before_action :authenticate_user!
 
     private
     def box_params
+      # what are these permits in the array for?
       params.require(:box).permit( :theme, :title, :image, [:id, :description, :done, :_destroy])
     end
 

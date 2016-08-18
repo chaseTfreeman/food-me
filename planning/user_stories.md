@@ -1,4 +1,5 @@
-
+// role, goal, reason
+// as a user, i should be able to own an account so that i can have my own collections of recipes.
 User Stories:
 I want Food.Me to require Users have an account and be signed in.
 

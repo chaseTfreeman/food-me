@@ -1,6 +1,7 @@
 
 Box.destroy_all
 Recipe.destroy_all
+# I would definitely include some collections in your seed file so you can test your association right away in development
 
 Box.create(theme:"Comfort Food", title:"Southern Comfort Food")
 Box.create(theme:"Asian", title:"Favorite Take Out Recipes", image: "http://media4.popsugar-assets.com/files/thumbor/Vw8ArLh2UeRMdgggeUKzuDDvZa8/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/10/07/906/n/24155406/548e503d02b8328c_thumb_temp_cover_file22153611412713292/i/Recipes-Kids-Favorite-Takeout-Food.jpg")

@@ -4,3 +4,4 @@ Rails.application.routes.draw do
     resources :recipes
     root :to => "boxes#index";
   end
+# watch the indentation for end, its small but they can creep up on you

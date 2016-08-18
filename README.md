@@ -1,5 +1,6 @@
 # README
 
+// why don't you include that? it'll take you like 1 minute. clone, db:create, db:migrate, db:seed, rails s
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
