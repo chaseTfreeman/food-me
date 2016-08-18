@@ -51103,3 +51103,75 @@ Processing by BoxesController#index as
   [1m[36mBox Load (0.6ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
   Rendered boxes/index.html.erb within layouts/application (3.6ms)
 Completed 200 OK in 118ms (Views: 69.1ms | ActiveRecord: 1.1ms)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from <top (required)> at /Users/Chase/wdi/projects/foodme/foodme/config/environment.rb:5)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from <top (required)> at /Users/Chase/wdi/projects/foodme/foodme/config/environment.rb:5)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from <top (required)> at /Users/Chase/wdi/projects/foodme/foodme/config/environment.rb:5)
+DEPRECATION WARNING: alias_method_chain is deprecated. Please, use Module#prepend instead. From module, you can access the original method using super. (called from <top (required)> at /Users/Chase/wdi/projects/foodme/foodme/config/environment.rb:5)
+Started GET "/" for ::1 at 2016-08-17 15:15:48 -0400
+Started GET "/" for ::1 at 2016-08-17 15:15:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BoxesController#index as HTML
+Processing by BoxesController#index as HTML
+  [1m[36mUser Load (19.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (20.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering boxes/index.html.erb within layouts/application
+  Rendering boxes/index.html.erb within layouts/application
+  [1m[36mBox Load (1.1ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  [1m[36mBox Load (1.7ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  Rendered boxes/index.html.erb within layouts/application (97.9ms)
+  Rendered boxes/index.html.erb within layouts/application (101.4ms)
+Started GET "/" for ::1 at 2016-08-17 15:15:51 -0400
+Processing by BoxesController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering boxes/index.html.erb within layouts/application
+  [1m[36mBox Load (1.0ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  Rendered boxes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 4057ms (Views: 3783.6ms | ActiveRecord: 50.1ms)
+
+
+Completed 200 OK in 4068ms (Views: 3794.7ms | ActiveRecord: 35.9ms)
+
+
+Completed 200 OK in 2403ms (Views: 2396.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/recipes/new" for ::1 at 2016-08-17 15:16:16 -0400
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/new.html.erb within layouts/application
+  [1m[36mBox Load (0.6ms)[0m  [1m[34mSELECT "boxes".* FROM "boxes"[0m
+  Rendered recipes/_form.html.erb (741.5ms)
+  Rendered recipes/new.html.erb within layouts/application (745.0ms)
+Completed 200 OK in 1154ms (Views: 1106.0ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/recipes" for ::1 at 2016-08-17 15:20:32 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/uzKKE5R32BFClramAD1/oWX+VVFZQ+ee8XpV/P9cCtJp1cIE+x0qnX2S56TEF181y5ebA2M9V2sKCP0XZKafQ==", "recipe"=>{"title"=>"Tasty Barbacoa", "ingredients"=>"Pork butt", "directions"=>"slow cook it for 8 hours on low", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fb0cb32a7c0 @tempfile=#<Tempfile:/var/folders/qt/lq0kmr_s27j31677jspf1cvw0000gn/T/RackMultipart20160817-11187-14ntws3.jpg>, @original_filename="barbacoa.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"barbacoa.jpg\"\r\nContent-Type: image/jpeg\r\n">, "box_ids"=>"44"}, "commit"=>"Create Recipe"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: box_ids
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (34.1ms)[0m  [1m[32mINSERT INTO "recipes" ("title", "ingredients", "directions", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Tasty Barbacoa"], ["ingredients", "Pork butt"], ["directions", "slow cook it for 8 hours on low"], ["image", "x4vpr391ugza48takexj.png"], ["created_at", 2016-08-17 19:20:32 UTC], ["updated_at", 2016-08-17 19:20:32 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "recipes" SET "image" = 'image/upload/v1471461633/x4vpr391ugza48takexj.png' WHERE "recipes"."id" = $1[0m  [["id", 61]]
+  [1m[35m (60.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBox Load (0.5ms)[0m  [1m[34mSELECT  "boxes".* FROM "boxes" WHERE "boxes"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "collections" ("box_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["box_id", 44], ["recipe_id", 61], ["created_at", 2016-08-17 19:20:34 UTC], ["updated_at", 2016-08-17 19:20:34 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/recipes/61
+Completed 302 Found in 1926ms (ActiveRecord: 106.8ms)
+
+
+Started GET "/recipes/61" for ::1 at 2016-08-17 15:20:34 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (4.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 286ms (Views: 249.7ms | ActiveRecord: 9.9ms)
+
+
