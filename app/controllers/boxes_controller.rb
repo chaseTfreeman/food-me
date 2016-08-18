@@ -20,7 +20,7 @@ before_action :authenticate_user!
 
     def create
       @box = current_user.boxes.build(box_params)
-      @box.save!
+      @box.save
       redirect_to @box
     end
 
