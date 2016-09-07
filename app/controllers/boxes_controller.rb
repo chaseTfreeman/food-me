@@ -1,5 +1,5 @@
 class BoxesController < ApplicationController
-before_action :authenticate_user!
+ before_filter :authenticate_user!, except: [ :index, :show ]
 
     def index
       @boxes = Box.all
